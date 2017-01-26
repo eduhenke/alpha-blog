@@ -1,2 +1,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo
+{
+  float: left;
+  font-size: 1.7em;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+.center
+{
+  text-align: center;
+}
+
+.jumbotron
+{
+  background-image: asset-url('doge-bg.jpg');
+  height: 1000px;
+}
+
+.jumbotron h1
+{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.btn-xlg
+{
+  font-size: 1.7em;
+  background-color: black;
+}
