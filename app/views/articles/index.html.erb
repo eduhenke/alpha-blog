@@ -1,5 +1,9 @@
 <h1>Articles</h1>
-<p>
-  <%= link_to 'Create new article', new_article_path %>
-</p>
+<%= link_to 'Create new article', new_article_path %><br>
+<div align="center">
+  <%= will_paginate %>
+</div>
 <%= render 'shared/display_articles' %>
+<div align="center">
+  <%= will_paginate %>
+</div>
