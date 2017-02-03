@@ -23,6 +23,16 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+  def show
+    id = params[:id]
+    if User.where(id: id).empty?
+      flash[:failure] = "Couldn't find user ID"
+      redirect_to articles_path
+    else
+      @user = User.find(id)
+      @articles = Article.where(user_id: id)
+    end
+  end
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)

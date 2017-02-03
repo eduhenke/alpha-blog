@@ -1,0 +1,23 @@
+<% if @articles %>
+  <% @articles.each do |article| %>
+    <div class="panel panel-default">
+        <div class="panel-heading"><h5><%= article.title %></h5></div>
+        <div class="panel-body">
+          <br>
+          <%= article.description %>
+          <hr />
+          <% if article.user %>
+            <div class="row">
+              By: <%= article.user.username%>
+            </div>
+          <% end %>
+          <div class="row">
+            Created: <%= time_ago_in_words(article.created_at) %> | Updated: <%= time_ago_in_words(article.updated_at) %><br>
+          </div>
+          <div class="row">
+            <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>   <%= link_to 'Show', article_path(article), class: 'btn btn-primary'%>   <%= link_to 'Delete', article_path(article), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?'}%><br>
+          </div>
+        </div>  
+    </div>
+  <% end %>
+<% end %>
