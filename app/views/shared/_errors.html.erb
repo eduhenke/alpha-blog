@@ -2,7 +2,10 @@
 <h2>Errors:</h2>
   <ul>
     <% obj.errors.full_messages.each do |msg|%>
-      <li><%= msg %></li>
+      <div class="alert alert-danger alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Warning!</strong> <%= msg %>
+      </div>
     <% end %>
   </ul>
 <% end %>
