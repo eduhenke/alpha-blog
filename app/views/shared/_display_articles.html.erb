@@ -1,7 +1,7 @@
 <% if @articles %>
   <% @articles.each do |article| %>
     <div class="panel panel-default">
-        <div class="panel-heading"><h5><%= article.title %></h5></div>
+        <div class="panel-heading article-title"><%= article.title %></div>
         <div class="panel-body">
           <br>
           <%= article.description %>
